@@ -66,8 +66,8 @@ const handleInputChange = (e)=>{
   }
 
   return (
-    <div className="w-full  md:w-10/12 mx-auto p-2 md:p-8 py-4   bg-[#F4F3F0] text-gray-800 sm:rounded-lg sm:shadow-lg md:my-8 my-4">
-    <h1 className="text-4xl font-extrabold mb-2 text-center">Update Coffee</h1>
+    <div className="w-full  md:w-10/12 mx-auto p-2 md:p-8 py-4   bg-[#F4F3F0] text-gray-800 sm:rounded-lg sm:shadow-lg md:my-8 my-4 font_2">
+    <h1 className="text-4xl font-extrabold mb-2 text-center font_1">Update Coffee</h1>
     <p className="text-gray-600 mb-2 text-center">
       Discover the perfect blend of flavors and aromas...
     </p>

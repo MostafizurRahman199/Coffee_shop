@@ -87,7 +87,7 @@ const PopularProducts = () => {
             {/* Info Section */}
             <div className="flex flex-col justify-between w-full md:w-2/3 font_2">
               <div>
-                <h2 className="text-2xl font-semibold text-[#331A15] ">
+                <h2 className="text-3xl font-semibold text-[#331A15] font_1">
                   {coffee.name}
                 </h2>
                 <p className="text-sm text-[#331A15] mt-2 ">

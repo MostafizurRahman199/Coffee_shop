@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom';
+import { Outlet, useLoaderData } from 'react-router-dom';
 
 import './App.css';
 import PopularProducts from './components/PopularProducts';
@@ -8,6 +8,7 @@ import UnderBanner from './components/UnderBanner';
 import { Gallery } from './components/Gallery';
 import ContactUs from './components/ContactUs';
 import Header from './components/Header';
+import { Navbar } from './components/Navbar';
 
 function App() {
  
@@ -15,12 +16,8 @@ function App() {
 
   return (
   <div className=''>
-    <Header></Header>
-    <Banner/>
-    <UnderBanner></UnderBanner>
-     <PopularProducts />
-     <Gallery></Gallery>
-     <ContactUs></ContactUs>
+    <Navbar></Navbar>
+    <Outlet></Outlet>
   </div>
   );
 }

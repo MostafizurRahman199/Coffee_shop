@@ -7,8 +7,8 @@ import icon4 from "../assets/icons/4.png"
 const UnderBannerItem = ({ icon, title, description }) => (
     <div className='flex flex-col items-center'>
         <img src={icon} alt="" />
-        <h3 className="text-[#331A15] font-bold text-xl">{title}</h3>
-        <p className="text-[#1B1A1A] text-center">{description}</p>
+        <h3 className="text-[#331A15] font-bold text-2xl">{title}</h3>
+        <p className="text-[#1B1A1A] text-center font_2">{description}</p>
     </div>
 );
 

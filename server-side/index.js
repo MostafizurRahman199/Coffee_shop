@@ -29,8 +29,19 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
+
+
+// _______________________created collections
+    
     const database = client.db("coffeeDB");
     const coffeeCollection = database.collection("coffee");
+
+     const userCollection = client.db("coffeeDB").collection("users");
+
+
+
+
+    //  ___________________coffee api start
 
     //get data
     app.get("/coffee", async (req, res) => {
@@ -97,8 +108,58 @@ async function run() {
       }
     });
 
-
+// ____________________Coffee api end
     
+
+
+
+
+
+//___________________user related apis start
+
+app.get("/single_user", async(req, res)=>{
+  
+  const {email }= req.body;
+  
+  const result = await userCollection.findOne({email : email});
+  res.json(result);
+})
+
+
+
+
+app.get("/users", async(req, res)=>{
+  
+  // const {email }= req.body;
+  
+  const result = await userCollection.find().toArray();
+  res.json(result);
+})
+
+
+app.delete("/users/:id", async(req, res)=>{
+  const id = req.params.id;
+  const query = {_id : new ObjectId(id)};
+  const result = await userCollection.deleteOne(query);
+  res.status(200).json({ success: true, message: 'User deleted successfully' });
+})
+
+
+
+app.post("/users", async(req, res)=>{
+
+    const newUser = req.body;
+    console.log(newUser);
+
+
+    const result = await userCollection.insertOne(newUser);
+    res.json(result)
+
+  
+
+})
+
+
 
 
 
