@@ -6,12 +6,13 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import AddCoffee from "./components/AddCoffee";
 import UpdateCoffee from "./components/UpdateCoffee";
 import CoffeeDetails from "./components/CoffeeDetails.jsx";
-import Signin from "./pages/Signin.jsx";
+
 import SignUp from "./pages/SignUp.jsx";
 import AuthProvider from "./Providers/AuthProvider.jsx";
 import Profile from "./pages/Profile.jsx";
 import Users from "./pages/Users.jsx";
 import Home from "./pages/Home.jsx";
+import SignIn from "./pages/Signin.jsx";
 
 
 const router = createBrowserRouter([
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/signin",
-        element:<Signin></Signin>
+        element:<SignIn></SignIn>
       },
       {
         path:"/signup",

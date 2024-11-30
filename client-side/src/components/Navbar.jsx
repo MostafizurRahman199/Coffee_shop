@@ -31,7 +31,7 @@ export const Navbar = () => {
       ))}
 
           <li >
-          <NavLink to={"/login"} className={({ isActive }) => `${getNavLinkClasses(isActive)} block md:hidden `}>
+          <NavLink to={"/signin"} className={({ isActive }) => `${getNavLinkClasses(isActive)} block md:hidden `}>
             <FaSignInAlt /> Login
           </NavLink>
          </li> 
@@ -87,9 +87,9 @@ export const Navbar = () => {
     <div className="navbar-end gap-2">
    <NavbarAvatar  getNavLinkClasses={ getNavLinkClasses}></NavbarAvatar>
 
-    <button  className=' hover:text-white transition-all  text-md  border-2 border-[#331A15] text-[#331A15] px-3  py-2 rounded-2xl  hover:bg-[#331A15] hidden md:block'>
+    <Link  to="/signin" className=' hover:text-white transition-all  text-md  border-2 border-[#331A15] text-[#331A15] px-3  py-2 rounded-2xl  hover:bg-[#331A15] hidden md:block'>
       Login
-    </button>
+    </Link>
 
     <Link to={"/signup"} className=' hover:text-white transition-all  text-md border-2 border-[#331A15] text-[#331A15]  px-3 py-2 rounded-2xl  hover:bg-[#331A15]  hidden md:block'>
       Register

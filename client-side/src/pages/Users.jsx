@@ -72,6 +72,7 @@ const Users = () => {
                 <th className="text-center py-4 px-6">Email</th>
                 <th className="text-center py-4 px-6">Profession</th>
                 <th className="text-center py-4 px-6">Join Date</th>
+                <th className="text-center py-4 px-6">Last Login</th>
                 <th className="text-center py-4 px-6">Action</th>
               </tr>
             </thead>
@@ -105,6 +106,7 @@ const Users = () => {
                   <td className="text-center py-4 px-6">{user?.email || 'Not mentioned'}</td>
                   <td className="text-center py-4 px-6">{user?.profession || 'Not mentioned'}</td>
                   <td className="text-center py-4 px-6">{user?.createdAt || 'Not mentioned'}</td>
+                  <td className="text-center py-4 px-6">{user?.lastSignInTime || 'Not mentioned'}</td>
                  
                   <td className="text-center py-4 px-6 ">
                     <div className="flex justify-center item-center gap-2">
@@ -119,16 +121,7 @@ const Users = () => {
             </tbody>
 
             {/* Foot */}
-            <tfoot>
-              <tr>
-                <th className="text-center py-4 px-6"></th>
-                <th className="text-center py-4 px-6">Name</th>
-                <th className="text-center py-4 px-6">Email</th>
-                <th className="text-center py-4 px-6">Profession</th>
-                <th className="text-center py-4 px-6">Join Date</th>
-                <th className="text-center py-4 px-6"></th>
-              </tr>
-            </tfoot>
+           
           </table>
         </div>
       </div>
